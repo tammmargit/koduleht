@@ -1,0 +1,51 @@
+.animated-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.light {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(46, 204, 113, 0.1);
+  border-radius: 50%;
+}
+
+.x1 {
+  animation: floatUp 20s linear infinite;
+  transform: scale(1.5);
+  left: 10%;
+}
+
+.x2 {
+  animation: floatUp 15s linear infinite;
+  left: 70%;
+}
+
+.x3 {
+  animation: floatUp 25s linear infinite;
+  transform: scale(0.8);
+  left: 40%;
+}
+
+.x4 {
+  animation: floatUp 18s linear infinite;
+  transform: scale(1.2);
+  left: 85%;
+}
+
+@keyframes floatUp {
+  0% {
+    top: 100%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    top: -20%;
+    opacity: 0;
+  }
+} 
