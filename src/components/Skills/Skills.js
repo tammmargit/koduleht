@@ -36,7 +36,7 @@ const Skills = () => {
       ]
     },
     {
-      title: "DevOps & Metodoloogia",
+      title: "Muu",
       icon: <FaCloud />,
       skills: [
         "Azure - rakenduste hostimine ja haldamine",

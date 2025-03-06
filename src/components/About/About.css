@@ -478,7 +478,15 @@ h2 {
   animation: glow 1.5s ease-in-out infinite alternate;
 }
 
-
+.hobbies-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  color: #62ff00;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(98, 255, 0, 0.3);
+}
 
 /* Responsive disain */
 @media (max-width: 768px) {

@@ -39,16 +39,16 @@ const Contact = () => {
                   +372 5301 5324
                 </span>
               </a>
+            </div>
 
-            <div className="command-line">
+            <div className="command-line status-command">
               <span className="prompt">$</span>
               <span className="command">get_status</span>
             </div>
               
-              <div className="contact-link status-message">
-                <FaCode className="status-icon" />
-                <p>That's basically it! Hetkel olen lihtsalt üks asjaarmastaja, kes püüab teha seda IT värki siin ja otsib põnevaid võimalusi arendajana. </p>
-              </div>
+            <div className="contact-link status-message">
+              <FaCode className="status-icon" />
+              <p>That's basically it! Hetkel olen lihtsalt üks asjaarmastaja, kes püüab teha seda IT värki ja otsib vahvaid võimalusi arendajana.</p>
             </div>
           </div>
         </div>

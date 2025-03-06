@@ -47,7 +47,7 @@ const About = () => {
         </div>
 
         <div className="hobbies-section">
-          <h3>Vabaaeg</h3>
+          <h3 className="hobbies-title">Vabaaeg</h3>
           <div className="hobbies-grid">
             <div className="hobby-card">
               <FaMusic className="hobby-icon" />
