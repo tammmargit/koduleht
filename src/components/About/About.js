@@ -29,14 +29,13 @@ const About = () => {
 
             <div className="about-text">
               <p className="detail-text">
-                Hetkel töötan lasteaias liikumisõpetajana, olen töö kõrvalt ka praktikal väikeses IT ettevõttes ja lõpetan vaikselt õpinguid TTHK-s.
+                Hetkel töötan lasteaias liikumisõpetajana, olen töö kõrvalt ka väikeses IT ettevõttes praktikal ja lõpetan vaikselt õpinguid TTHK-s.
               </p>
               <p className="detail-text">
-                Üldiselt kui ma mingi ülesande või eesmärgi ette võtan, siis tihti peale ma kaon selle sisse tundideks, kuni on asi tehtud. Mu vabaaeg kulub peamiselt
-                spordile, klaveri mängimisele ja erinevatele IT alastele ülesannetele.
+                Mu vabaaeg kulub peamiselt spordile, klaveri mängimisele ja erinevatele IT alastele ülesannetele. Üldiselt kui ma mingi ülesande või eesmärgi ette võtan, siis tihti peale ma kaon selle sisse tundideks, kuni on asi tehtud. 
               </p>
               <p className="detail-text">
-                Kuigi IT kogemuste pagas pole küll eriliselt suur, siis huvi seda õppida on kindlalt suurem.
+                Kuigi IT kogemuste pagas pole küll eriliselt suur, siis huvi seda õppida ning teha on kindlasti suurem.
               </p>
             </div>
           </div>
