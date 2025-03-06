@@ -1,20 +1,19 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import './Home.css';
 
 const Home = () => {
+  const textArray = useMemo(() => [
+    "Mina olen Margit",
+    "Ma olen IT huviline",
+    "See on minu kodu"
+  ], []);
+  
+  const period = 1000;
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [delta, setDelta] = useState(50);
   
-  const textArray = [
-    "Mina olen Margit",
-    "Ma olen IT huviline",
-    "See on minu kodu"
-  ];
-  
-  const period = 1000;
-
   const tick = useCallback(() => {
     let i = loopNum % textArray.length;
     let fullText = textArray[i];
