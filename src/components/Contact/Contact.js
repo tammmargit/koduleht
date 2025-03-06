@@ -39,7 +39,11 @@ const Contact = () => {
                   +372 5301 5324
                 </span>
               </a>
-              
+
+            <div className="command-line">
+              <span className="prompt">$</span>
+              <span className="command">get_status</span>
+            </div>
               
               <div className="contact-link status-message">
                 <FaCode className="status-icon" />

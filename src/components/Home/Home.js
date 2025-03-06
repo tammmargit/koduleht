@@ -5,7 +5,7 @@ const Home = () => {
   const textArray = useMemo(() => [
     "Mina olen Margit",
     "Ma olen IT huviline",
-    "See on minu kodu"
+    "See on minu koduleht"
   ], []);
   
   const period = 1000;

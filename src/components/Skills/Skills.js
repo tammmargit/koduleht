@@ -21,7 +21,8 @@ const Skills = () => {
         "MySQL - andmebaasi disain ja päringud",
         "MS SQL - .NET rakenduste andmebaasid",
         "SQLite - kergemate rakenduste andmebaasid",
-        "API-de disain ja dokumenteerimine"
+        "API-de disain ja dokumenteerimine",
+        "Python - tööriistade arendamine"
       ]
     },
     {
