@@ -1,8 +1,10 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './Home.css';
 
 const Home = () => {
   const [text, setText] = useState('');
+  const fullText = "Tere! Mina olen Margit";
+  const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   
@@ -16,34 +18,17 @@ const Home = () => {
   const period = 1000;
   const [delta, setDelta] = useState(50);
 
+  const tick = useCallback(() => {
+    if (index < fullText.length) {
+      setText(prev => prev + fullText[index]);
+      setIndex(prev => prev + 1);
+    }
+  }, [fullText, index]);
+
   useEffect(() => {
-    tick();
     const timer = setInterval(() => tick(), 1000);
     return () => clearInterval(timer);
   }, [tick]);
-
-  const tick = () => {
-    let i = loopNum % textArray.length;
-    let fullText = textArray[i];
-    let updatedText = isDeleting 
-      ? fullText.substring(0, text.length - 1) 
-      : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (isDeleting) {
-      setDelta(prevDelta => prevDelta / 2);
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setDelta(period);
-    } else if (isDeleting && updatedText === '') {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setDelta(100);
-    }
-  };
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
