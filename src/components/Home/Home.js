@@ -1,22 +1,47 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import './Home.css';
 
 const Home = () => {
   const [text, setText] = useState('');
-  const fullText = "Tere! Mina olen Margit";
-  const [index, setIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [delta, setDelta] = useState(50);
+  
+  const textArray = [
+    "Mina olen Margit",
+    "Ma olen IT huviline",
+    "See on minu kodu"
+  ];
+  
+  const period = 1000;
 
   const tick = useCallback(() => {
-    if (index < fullText.length) {
-      setText(prev => prev + fullText[index]);
-      setIndex(prev => prev + 1);
+    let i = loopNum % textArray.length;
+    let fullText = textArray[i];
+    let updatedText = isDeleting 
+      ? fullText.substring(0, text.length - 1) 
+      : fullText.substring(0, text.length + 1);
+
+    setText(updatedText);
+
+    if (isDeleting) {
+      setDelta(prevDelta => prevDelta / 2);
     }
-  }, [fullText, index]);
+
+    if (!isDeleting && updatedText === fullText) {
+      setIsDeleting(true);
+      setDelta(period);
+    } else if (isDeleting && updatedText === '') {
+      setIsDeleting(false);
+      setLoopNum(loopNum + 1);
+      setDelta(100);
+    }
+  }, [isDeleting, loopNum, period, text.length, textArray]);
 
   useEffect(() => {
-    const timer = setInterval(() => tick(), 1000);
+    const timer = setInterval(() => tick(), delta);
     return () => clearInterval(timer);
-  }, [tick]);
+  }, [tick, delta]);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -26,10 +51,14 @@ const Home = () => {
   };
 
   return (
-    <section className="home-section">
+    <section id="home" className="home-section">
       <div className="home-container">
         <div className="home-left">
-          <h1>{text}</h1>
+          <div className="text-animation-container">
+            <h1 className="main-heading">Tere!</h1>
+            <h2 className="typing-text">{text}<span className="cursor">|</span></h2>
+          </div>
+          
           <div className="tagline">
             <p className="gradient-text">Loe rohkem</p>
           </div>
@@ -46,6 +75,7 @@ const Home = () => {
           </button>
         </div>
         <div className="home-right">
+          {/* <img src={pilt} alt="Profile" /> */}
         </div>
       </div>
     </section>
