@@ -21,50 +21,30 @@ const Contact = () => {
               <span className="command">get_contact_info</span>
             </div>
             
-            <div className="contact-links">
-              <a href="mailto:sinu.email@gmail.com" className="contact-link">
+            <div className="contact-info">
+              <a href="mailto:margit.tammeorg@hotmail.com" 
+                 className="contact-link">
                 <FaEnvelope />
                 <span className="link-text">
                   <span className="label">EMAIL:</span>
                   margit.tammeorg@hotmail.com
                 </span>
               </a>
-              
-              <a 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
+
+              <a href="tel:+37253015324" 
                  className="contact-link">
                 <FaPhoneAlt />
                 <span className="link-text">
-                  <span className="label">PHONE NUMBER:</span>
+                  <span className="label">TELEFON:</span>
                   +372 5301 5324
                 </span>
               </a>
               
-              {/*
-              <a href="https://github.com/tammmargit" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 className="contact-link">
-                <FaGithub />
-                <span className="link-text">
-                  <span className="label">GITHUB:</span>
-                  /tammmargit
-                </span>
-              </a>
-              */}
-            </div>
-            
-
-            <div className="command-line">
-              <span className="prompt">$</span>
-              <span className="command">get_status</span>
-            </div>
-            
-            <div className="status-message">
-              <FaCode className="status-icon" />
-              <p>That's basically it! Hetkel olen lihtsalt üks asjaarmastaja, kes püüab teha seda IT värki siin ja otsib põnevaid võimalusi arendajana. 
-                </p>
+              
+              <div className="contact-link status-message">
+                <FaCode className="status-icon" />
+                <p>That's basically it! Hetkel olen lihtsalt üks asjaarmastaja, kes püüab teha seda IT värki siin ja otsib põnevaid võimalusi arendajana. </p>
+              </div>
             </div>
           </div>
         </div>
