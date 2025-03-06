@@ -70,10 +70,11 @@ const Header = () => {
           </div>
         </div>
         <div className="nav-links">
-          <a onClick={() => scrollToSection('about')}>Minust</a>
-          <a onClick={() => scrollToSection('portfolio')}>Tehtud tööd</a>
-          <a onClick={() => scrollToSection('skills')}>Oskused</a>
-          <a onClick={() => scrollToSection('contact')}>Kontakt</a>
+          <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>Home</a>
+          <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection('about'); }}>Minust</a>
+          <a href="#portfolio" onClick={(e) => { e.preventDefault(); scrollToSection('portfolio'); }}>Tehtud tööd</a>
+          <a href="#skills" onClick={(e) => { e.preventDefault(); scrollToSection('skills'); }}>Oskused</a>
+          <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Kontakt</a>
         </div>
       </nav>
     </header>

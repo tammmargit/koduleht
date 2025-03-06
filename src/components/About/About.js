@@ -1,6 +1,5 @@
 import './About.css';
-import { useState } from 'react';
-import { FaReact, FaJs, FaHtml5, FaCss3 } from 'react-icons/fa';
+import React from 'react';
 import margitPilt from '../../assets/images/margit.png';
 import { FaBook, FaDumbbell, FaSnowboarding, FaGraduationCap, FaMusic } from 'react-icons/fa';
 import { GiTennisRacket, GiTennisCourt } from 'react-icons/gi';

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import './Home.css';
-import pilt from '../../assets/images/margit.png';
 
 const Home = () => {
   const [text, setText] = useState('');
@@ -18,12 +17,10 @@ const Home = () => {
   const [delta, setDelta] = useState(50);
 
   useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => clearInterval(ticker);
-  }, [text, delta]);
+    tick();
+    const timer = setInterval(() => tick(), 1000);
+    return () => clearInterval(timer);
+  }, [tick]);
 
   const tick = () => {
     let i = loopNum % textArray.length;
