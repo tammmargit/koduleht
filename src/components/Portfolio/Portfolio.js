@@ -24,7 +24,7 @@ const Portfolio = () => {
     {
       id: 2,
       title: "Maki Chat App",
-      description: "Reaalajas vestlusrakendus kasutajate suhtlemiseks. Saab luua oma konto kui ka sisse logida demo kontoga Jaanus, parool Jaanus.",
+      description: "Reaalajas vestlusrakendus kasutajate suhtlemiseks. Saab luua oma konto ning ka sisse logida demo kontoga Jaanus, parool Jaanus.",
       image: "/chat.jpg",
       tags: ["React", "Stream.io", "CSS"],
       features: [
@@ -83,9 +83,7 @@ const Portfolio = () => {
       tags: ["PHP", "XML", "Laravel", "API"],
       features: [
         "XML failide automaatne töötlemine",
-        "Toodete sünkroniseerimine",
-        "Administreerimisliides",
-      ]
+        "Toodete sünkroniseerimine"      ]
     }
   ];
 

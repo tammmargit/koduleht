@@ -16,7 +16,7 @@ const About = () => {
               <div className="education-card current">
                 <span className="status-badge">Praegu</span>
                 <h3>Noorem Tarkvaraarendaja</h3>
-                <p>Tallinna Tehnikakõrgkool</p>
+                <p>Tallinna Tööstushariduskeskus</p>
                 <p className="year">2023 - ...</p>
               </div>
 
